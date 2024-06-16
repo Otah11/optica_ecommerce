@@ -1,0 +1,221 @@
+{
+  "productTypes": [
+    { "name": "Sunglasses" },
+    { "name": "Prescription Glasses" }
+  ],
+  "genders": [
+    { "name": "Male" },
+    { "name": "Female" },
+    { "name": "Unisex" }
+  ],
+  "categories": [
+    { "name": "Classics" },
+    { "name": "Sports" }
+  ],
+  "colors": [
+    { "name": "Black", "hexValue": "#000000" },
+    { "name": "Blue", "hexValue": "#0000FF" }
+  ],
+  "products": [
+    {
+      "name": "Oakley Holbrook",
+      "code": "001",
+      "description": "Durability and all-day comfort",
+      "price": 200,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Male" },
+      "categories": [
+        { "name": "Sports" }
+      ],
+      "measures": {
+        "lenses": 55,
+        "bridge": 18,
+        "temple": 137
+      },
+      "colors": [
+        { "name": "Black", "stock": 70, "isPolarized":false },
+        { "name": "Blue", "stock": 40, "isPolarized": true }
+      ]
+    },
+    {
+      "name": "Gucci GG0061S",
+      "code": "002",
+      "description": "Elegant and stylish",
+      "price": 350,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Female" },
+      "categories": [
+        { "name": "Classics" }
+      ],
+      "measures": {
+        "lenses": 56,
+        "bridge": 20,
+        "temple": 140
+      },
+      "colors": [
+        { "name": "Black", "stock": 30, "isPolarized":false },
+        { "name": "Blue", "stock": 25, "isPolarized": true }
+      ]
+    },
+    {
+      "name": "Persol PO3108S",
+      "code": "003",
+      "description": "Timeless design",
+      "price": 220,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Unisex" },
+      "categories": [
+        { "name": "Classics" }
+      ],
+      "measures": {
+        "lenses": 52,
+        "bridge": 18,
+        "temple": 145
+      },
+      "colors": [
+        { "name": "Black", "stock": 80, "isPolarized":false },
+        { "name": "Blue", "stock": 45, "isPolarized":false }
+      ]
+    },
+    {
+      "name": "Maui Jim Peahi",
+      "code": "004",
+      "description": "Enhanced colors and clarity",
+      "price": 250,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Male" },
+      "categories": [
+        { "name": "Sports" }
+      ],
+      "measures": {
+        "lenses": 65,
+        "bridge": 16,
+        "temple": 125
+      },
+      "colors": [
+        { "name": "Black", "stock": 90, "isPolarized": true },
+        { "name": "Blue", "stock": 60, "isPolarized": true }
+      ]
+    },
+    {
+      "name": "Prada PR17WS",
+      "code": "005",
+      "description": "Bold and fashionable",
+      "price": 320,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Female" },
+      "categories": [
+        { "name": "Classics" }
+      ],
+      "measures": {
+        "lenses": 54,
+        "bridge": 19,
+        "temple": 140
+      },
+      "colors": [
+        { "name": "Black", "stock": 50, "isPolarized":false },
+        { "name": "Blue", "stock": 30, "isPolarized":false }
+      ]
+    },
+    {
+      "name": "Versace VE2140",
+      "code": "006",
+      "description": "Luxurious and iconic",
+      "price": 290,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Unisex" },
+      "categories": [
+        { "name": "Classics" }
+      ],
+      "measures": {
+        "lenses": 61,
+        "bridge": 15,
+        "temple": 135
+      },
+      "colors": [
+        { "name": "Black", "stock": 40, "isPolarized":false },
+        { "name": "Blue", "stock": 20, "isPolarized":false }
+      ]
+    },
+    {
+      "name": "Ray-Ban Aviator",
+      "code": "007",
+      "description": "Timeless teardrop shape",
+      "price": 180,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Unisex" },
+      "categories": [
+        { "name": "Classics" }
+      ],
+      "measures": {
+        "lenses": 58,
+        "bridge": 14,
+        "temple": 135
+      },
+      "colors": [
+        { "name": "Black", "stock": 100, "isPolarized":false },
+        { "name": "Blue", "stock": 50, "isPolarized": true }
+      ]
+    },
+    {
+      "name": "Tom Ford FT0591",
+      "code": "008",
+      "description": "Sophisticated and modern",
+      "price": 400,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Female" },
+      "categories": [
+        { "name": "Classics" }
+      ],
+      "measures": {
+        "lenses": 57,
+        "bridge": 18,
+        "temple": 140
+      },
+      "colors": [
+        { "name": "Black", "stock": 25, "isPolarized":false },
+        { "name": "Blue", "stock": 15, "isPolarized":false }
+      ]
+    },
+    {
+      "name": "Nike Show X2",
+      "code": "009",
+      "description": "Performance-oriented design",
+      "price": 180,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Unisex" },
+      "categories": [
+        { "name": "Sports" }
+      ],
+      "measures": {
+        "lenses": 61,
+        "bridge": 15,
+        "temple": 125
+      },
+      "colors": [
+        { "name": "Black", "stock": 60, "isPolarized":false },
+        { "name": "Blue", "stock": 35, "isPolarized": true }
+      ]
+    },
+    {
+      "name": "Under Armour Igniter",
+      "code": "010",
+      "description": "For the active lifestyle",
+      "price": 160,
+      "productsType": { "name": "Sunglasses" },
+      "gender": { "name": "Male" },
+      "categories": [
+        { "name": "Sports" }
+      ],
+      "measures": {
+        "lenses": 62,
+        "bridge": 19,
+        "temple": 127
+      },
+      "colors": [
+        { "name": "Black", "stock": 55, "isPolarized":false },
+        { "name": "Blue", "stock": 40, "isPolarized":false }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,11 @@
 import { Categories } from "src/products/entities/categories.entity";
 import { Cart } from "../../purchase_orders/cart.entity";
-import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { v4 as uuid } from 'uuid';
-import { TypeProduct } from "./typeProduct.entity";
-import { Genre } from "./genre.entity";
-import { Measures } from "./measures";
+import { ProductsType } from './productsType.entity';
+import { Gender } from "./gender.entity";
+import { Measurements } from "./measurements";
+import { ProductsColors } from './productsColors.entity';
 
 @Entity({name: 'products'})
 export class Products {
@@ -15,7 +16,7 @@ export class Products {
     name: string
 
     @Column()
-    stock: number
+    code: string
 
     @Column()
     price: number
@@ -23,11 +24,11 @@ export class Products {
     @Column()
     description: string
 
-    @Column()
+    @Column({default: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'})
     image: string
 
-    @Column(()=> Measures)
-    measures: Measures
+    @Column(()=> Measurements)
+    measurements: Measurements
 
     @ManyToMany(()=> Cart, cart => cart.products)
     @JoinTable({name: 'products_cart', joinColumn: {name: 'product_id'}, inverseJoinColumn: {name: 'cart_id'}})
@@ -37,13 +38,15 @@ export class Products {
     @JoinTable({name: 'products_categories', joinColumn: {name: 'product_id'}, inverseJoinColumn: {name: 'category_id'}})
     categories: Categories[]
 
-    @ManyToOne(()=> TypeProduct, typeProduct => typeProduct.products)
+    @ManyToOne(()=> ProductsType, productsType => productsType.products)
     @JoinColumn({name: 'type_product_id'})
-    typeProduct: TypeProduct
+    productsType: ProductsType
     
-    @ManyToOne(()=> Genre, genre => genre.products)
-    @JoinColumn({name: 'genre_id'})
-    genre: Genre
-    
+    @ManyToOne(()=> Gender, gender => gender.products)
+    @JoinColumn({name: 'gender_id'})
+    gender: Gender
 
+    @OneToMany(()=> ProductsColors, productsColors => productsColors.products)
+    @JoinColumn({name: 'productsColors_id'})
+    productsColors: ProductsColors[]
 }

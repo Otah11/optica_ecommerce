@@ -15,6 +15,7 @@ const config = {
     synchronize: true,
     autoLoadEntities: true,
     logging: ['error'],
+    
     //dropSchema: true
 }
 

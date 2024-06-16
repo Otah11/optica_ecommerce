@@ -3,9 +3,12 @@ import {
     IsEmail,
     IsNotEmpty,
     IsNumber,
+    IsOptional,
     IsString,
     Matches,
+    Max,
     MaxLength,
+    Min,
     MinLength,
   } from 'class-validator';
   
@@ -19,7 +22,17 @@ import {
         description: 'Coloque su nombre',
         example: 'Juan Perez'
       })
-      name: string
+      optica: string
+
+      @IsNotEmpty()
+      @IsNumber()
+      @Min(10000000000)
+      @Max(99999999999)
+      @ApiProperty({
+        description: 'Coloque su CUIL/CUIT sin puntos (.) ni guiones (-)',
+        example: '70259221541'
+      })
+      cuilcuit: number
   
       @IsEmail()
       @IsNotEmpty()
@@ -29,11 +42,10 @@ import {
       })
       email: string
   
-  
       @IsNotEmpty()
       @MinLength(8)
       @MaxLength(15)
-      @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&_\-]).{8,15}$/, { message: 'password too weak' })
+      @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&_\-]).{8,15}$/, { message: 'El password es muy debil' })
       @IsString()
       @ApiProperty({
         description: 'Coloque su contraseña, debe contener al menos una mayuscula, una minuscula, un numero y un caracter especial',
@@ -44,14 +56,19 @@ import {
       @IsNotEmpty()
       @MinLength(8)
       @MaxLength(15)
-      @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&_\-]).{8,15}$/, { message: 'password too weak' })
+      @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&_\-]).{8,15}$/, { message: 'El password no coincide' })
       @IsString()
       @ApiProperty({
         description: 'Repita su contraseña',
         example: 'Password1!'
       })
       confirmPassword: string
-  
+      
+      @ApiProperty()
+      @IsString()
+      @IsOptional()
+      ingresosbrutos?: string
+
       @IsNotEmpty()
       @MinLength(3)
       @MaxLength(80)
@@ -70,7 +87,6 @@ import {
       })
       phone: number
   
-      @MinLength(5)
       @MaxLength(20)
       @IsNotEmpty()
       @IsString()
@@ -80,7 +96,6 @@ import {
       })
       country: string
   
-      @MinLength(5)
       @MaxLength(20)
       @IsNotEmpty()
       @IsString()
@@ -89,4 +104,5 @@ import {
         example: 'Alguna ciudad'
       })
       city: string
+
   }

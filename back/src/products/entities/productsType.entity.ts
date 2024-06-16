@@ -1,19 +1,18 @@
 import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid';
 import { Products } from "./products.entity";
 
-@Entity({name: 'genres'})
-export class Genre {
-    
+@Entity({ name: 'type_product' })
+export class ProductsType {
     @PrimaryGeneratedColumn('uuid')
     id: string = uuid();
     
-    
     @Column()
-    name: string
+    name: string;
 
-    @OneToMany(() => Products, products => products.genre)
-    @JoinColumn({name: 'genre_id'})
+    @OneToMany(() => Products, products => products.productsType)
+    @JoinColumn({ name: 'product_id' })
     products: Products[]
+
 
 }

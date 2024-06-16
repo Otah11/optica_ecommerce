@@ -1,6 +1,6 @@
 import { Column } from "typeorm";
 
-export class Measures {
+export class Measurements {
 
     @Column('int')
     lenses: number;

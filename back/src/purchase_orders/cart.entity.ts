@@ -15,10 +15,10 @@ export class Cart {
     status: string;
 
     @OneToOne(() => PurchaseOrders, purchase_orders => purchase_orders.cart)
-    @JoinColumn({name: 'purchase_orders:id'})
+    @JoinColumn({name: 'purchase_orders_id'})
     purchase_orders: PurchaseOrders
 
     @ManyToMany(() => Products, product => product.cart)
-    @JoinTable({name: 'products:id'})
+    @JoinTable({name: 'products_id'})
     products: Products[]
 }
